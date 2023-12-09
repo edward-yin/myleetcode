@@ -1,7 +1,11 @@
 #!/bin/bash
 
-/usr/bin/mkdir $1
-/usr/bin/touch $1/main.c
+MKDIR=$(which mkdir)
+# echo $MKDIR
+TOUCH=$(which touch)
+# echo $TOUCH
+$MKDIR $1
+$TOUCH $1/main.c
 
 echo "#include <stdio.h>" > $1/main.c
 echo "#include <string.h>" >> $1/main.c
