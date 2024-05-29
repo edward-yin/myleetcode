@@ -13,7 +13,6 @@ bool middle(struct TreeNode* root) {
     if (!root) {
         return true;
     }
-
     ret = middle(root->left);
     if (ret == false) {
         return ret;
@@ -22,16 +21,12 @@ bool middle(struct TreeNode* root) {
     if (root->val <= pre) {
         return false;
     }
-
-
     ret = middle(root->right);
     pre = root->val;
     return ret;
-
 }
 
 bool isValidBST(struct TreeNode* root){
-
     middle(root);
 }
 
