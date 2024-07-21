@@ -18,4 +18,17 @@ echo "{" >> $1/main.c
 echo "" >> $1/main.c
 echo "}" >> $1/main.c
 
+$TOUCH $1/main.py
+echo "#!/usr/bin/env python3" > $1/main.py
+echo "# -*- coding: utf-8 -*-" >> $1/main.py
+echo "" >> $1/main.py
+echo "class Solution:" >> $1/main.py
+
+echo "def main():" >> $1/main.py
+echo "" >> $1/main.py
+echo "if __name__ == "__main__":" >> $1/main.py
+echo "    main()" >> $1/main.py
+
+
+
 exit 0
